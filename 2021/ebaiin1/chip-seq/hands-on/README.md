@@ -332,18 +332,17 @@ module add picard/2.22.0
 
 ## Run picard
 picard MarkDuplicates \
-
 CREATE_INDEX=true \
 INPUT=SRR576933.bam \
 OUTPUT=Marked_SRR576933.bam \
-METRICS_FILE=metrics \
+METRICS_FILE=metrics_33 \
 VALIDATION_STRINGENCY=STRICT
 
 picard MarkDuplicates \
 CREATE_INDEX=true \
 INPUT=SRR576938.bam \
 OUTPUT=Marked_SRR576938.bam \
-METRICS_FILE=metrics \
+METRICS_FILE=metrics_38 \
 VALIDATION_STRINGENCY=STRICT
 ```
 
