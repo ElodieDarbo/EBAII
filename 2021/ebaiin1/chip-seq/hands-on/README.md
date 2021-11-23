@@ -238,7 +238,7 @@ cd ..
 ```
 
 ### 4 - Mapping the IP samples
-1. Create a directory named **IP** to put mapping results for IP
+1. Create a directory named **bam** to put mapping results
 ```bash
 mkdir bam
 ```
@@ -271,7 +271,7 @@ Your directory structure should be like this:
 ```bash  
 ## Run alignment
 ## Tip: first type bowtie command line then add quotes around and prefix it with "sbatch --cpus 10 --wrap="
-sbatch --cpus-per-task 10 --wrap="bowtie -p 10 ../../index/Escherichia_coli_K12 ../../../data/SRR576933.fastq.gz -v 2 -m 1 -3 1 -S 2> SRR576933.out > SRR576933.sam"
+sbatch --cpus-per-task 10 --wrap="bowtie -p 10 ../index/Escherichia_coli_K12 ../../data/SRR576933.fastq.gz -v 2 -m 1 -3 1 -S 2> SRR576933.out > SRR576933.sam"
 ```  
 This should take few minutes as we work with a small genome. For the human genome, we would need either more time and more resources.
 
